@@ -8,6 +8,7 @@ chmod 700 get_helm.sh
 ```
 
 ```shell
+helm create mychart (Just for demo)
 helm install myfirstapp-release myapp/
 helm upgrade myfirstapp-release myapp/ --values myapp/values.yaml
 ```
