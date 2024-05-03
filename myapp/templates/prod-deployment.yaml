@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: {{ .Values.prod.name }}-container
-        image: wokanadedo4644/prod:1
+        image: wokanadedo4644/{{ .Values.prod.name }}:1
         ports:
         - containerPort: 80
