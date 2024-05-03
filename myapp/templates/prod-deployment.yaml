@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prod-app
+  name: {{ .Values.prod.name }}-app
 spec:
   replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
-      app: prod-app
+      app: {{ .Values.prod.name }}-app
   template:
     metadata:
       labels:
-        app: prod-app
+        app: {{ .Values.prod.name }}-app
     spec:
       containers:
-      - name: prod-container
+      - name: {{ .Values.prod.name }}-container
         image: wokanadedo4644/prod:1
         ports:
         - containerPort: 80
